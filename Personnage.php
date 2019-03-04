@@ -10,6 +10,10 @@ class Personnage {
     private $atk = 20;
     private $nom;
 
+    const MAX_VIE = 100;
+//    ou private static $max_vie = 100;
+// Propre à la classe et non à chaque instance (personnage)
+
     public function getVie()
     {
         return $this->vie;
@@ -38,7 +42,8 @@ class Personnage {
     public function regenerer($vie = null)
     {
         if (is_null($vie)) {
-            $this->vie = 100;
+            $this->vie = self::MAX_VIE;
+//            $this->vie = self::$max_vie;
         } else { // $this->vie = $this->vie + $vie;
             $this->vie += $vie;
         }
