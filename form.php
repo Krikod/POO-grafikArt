@@ -22,11 +22,18 @@ class Form
         return isset($this->data[$index]) ? $this->data[$index]: null ;
     }
 
-    public function input($name)
+//    public function input($name)
+//    {
+//        return $this->surround('<input type="text" name="' . $name . '"
+//        value="' . $this->getValue($name) . '">'
+//        );
+//    }
+
+    public function input($label, $type, $name)
     {
-        return $this->surround('<input type="text" name="' . $name . '" 
-        value="' . $this->getValue($name) . '">'
-        );
+        echo '<p><label for="'.$name.'" />'.$label.'</label></p>
+            <p><input type="'.$type.'" id="" name="' .$name. '" id="'.$name.'"
+            value="'.$this->getValue($name).'" /></p>';
     }
 
     public function submit()

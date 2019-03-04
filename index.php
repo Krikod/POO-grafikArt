@@ -6,8 +6,8 @@ $form = new Form($_POST);
 ?>
 <form action="#" method="post">
     <?php
-    echo $form->input('username');
-    echo $form->input('password');
+    echo $form->input('Nom:', 'text', 'username');
+    echo $form->input('Mot de passe: ', 'password', 'password');
     echo $form->submit();
     ?>
 </form>
