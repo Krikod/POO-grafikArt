@@ -1,8 +1,8 @@
 <?php
 
-require "Form.php";
-require "Text.php";
-require "Personnage.php";
+require 'Form.php';
+require 'Text.php';
+require 'Personnage.php';
 
 $merlin = new Personnage('Merlin');
 $merlin->regenerer();
