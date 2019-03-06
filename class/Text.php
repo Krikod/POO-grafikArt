@@ -1,5 +1,7 @@
 <?php
 
+namespace Krikod;
+
 /**
  * Class Text
  * Allows to manipulate text

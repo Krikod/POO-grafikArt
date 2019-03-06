@@ -1,5 +1,7 @@
 <?php
 
+namespace Krikod\HTML;
+
 class BootstrapForm extends Form
 {
     /**
@@ -31,5 +33,4 @@ class BootstrapForm extends Form
     {
         return $this->surround('<button type="submit" class="btn btn-primary">Envoyer</button>');
     }
-
 }

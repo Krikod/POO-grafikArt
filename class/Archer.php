@@ -1,5 +1,7 @@
 <?php
 
+namespace Krikod;
+
 class Archer extends Personnage
 {
 //    Archer a les propr du parent + celles de l'enfant:

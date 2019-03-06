@@ -1,4 +1,7 @@
 <?php
+
+namespace Krikod;
+
 // PUBLIC: accessible de la classe par '$this->>prop', et du dehors $merlin->nom
 // Par défaut, var en PRIVATE. Accessibilité depuis ext via ->getters.
 // PRIVATE que ds la classe -> ou fct getNom(), return $this->nom. Hors classe, accès via $merlin->getNom();

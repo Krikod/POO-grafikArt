@@ -1,5 +1,7 @@
 <?php
 
+namespace Krikod\HTML;
+
 /**
  * Class Form
  * Allows to generate a form easily
@@ -16,7 +18,6 @@ class Form
      * @var string Tag used to surround fields
      */
     protected $surround = 'p';
-
 
     /**
      * Form constructor.
