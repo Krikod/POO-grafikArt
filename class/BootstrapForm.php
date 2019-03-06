@@ -19,7 +19,7 @@ class BootstrapForm extends Form
     public function input($name)
     {
         return $this->surround(
-            '<label>' . $name . '</label>',
+            '<label>' . $name . '</label>'.
             '<input type="text" name="' . $name . '" value="' . $this->getValue($name) . '" class="form-control">'
         );
     }

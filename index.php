@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">-->
+    <!-- Latest compiled and minified JavaScript -->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script></head>-->
 <body>
-
 <?php
-require 'Form.php';
-require 'BootstrapForm.php';
+require 'class/Autoloader.php';
+Autoloader::register();
 $form = new BootstrapForm($_POST);
 ?>
 
 <form action="#" method="post">
     <?php
-    echo $form->input('Nom: ', 'text', 'username');
-    echo $form->input('Mot de passe: ', 'password', 'password');
+    echo $form->input('Nom: ');
+    echo $form->input( 'Mot de passe: ');
     echo $form->submit();
     ?>
 </form>
