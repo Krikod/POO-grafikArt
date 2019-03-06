@@ -28,3 +28,8 @@ class Text
         }
     }
 }
+// Dans index.php:
+// Appeler la méthode statique de la classe Text.
+// Prop. ou meth. static = propres à la classe, non aux instances ->
+// pas besoin d'instancier la classe !
+//var_dump(Text::withZero(1));

@@ -10,12 +10,12 @@ class Form
     /**
      * @var array Data used by the form
      */
-    private $data;
+    protected $data;
 
     /**
      * @var string Tag used to surround fields
      */
-    public $surround = 'p';
+    protected $surround = 'p';
 
 
     /**
@@ -32,7 +32,7 @@ class Form
      * @param $html string Surrounded HTML code
      * @return string
      */
-    private function surround($html)
+    protected function surround($html)
     {
         return "<{$this->surround}>{$html}</$this->surround}>";
         // accolades pour que la variable soi interprétée par les ""
@@ -42,29 +42,33 @@ class Form
      * @param $index string Index of the value to get
      * @return mixed|null
      */
-    private function getValue($index)
+    protected function getValue($index)
     {
         return isset($this->data[$index]) ? $this->data[$index]: null ;
     }
 
-//    public function input($name)
-//    {
-//        return $this->surround('<input type="text" name="' . $name . '"
-//        value="' . $this->getValue($name) . '">'
-//        );
-//    }
-
     /**
-     * @param $label string
-     * @param $type string
      * @param $name string
+     * @return string
      */
-    public function input($label, $type, $name)
+    protected function input($name)
     {
-        echo '<p><label for="'.$name.'" />'.$label.'</label></p>
-            <p><input type="'.$type.'" id="" name="' .$name. '" id="'.$name.'"
-            value="'.$this->getValue($name).'" /></p>';
+        return $this->surround('<input type="text" name="' . $name . '"
+        value="' . $this->getValue($name) . '">'
+        );
     }
+
+//    /**
+//     * @param $label string
+//     * @param $type string
+//     * @param $name string
+//     */
+//    public function input($label, $type, $name)
+//    {
+//        echo '<p><label for="'.$name.'" />'.$label.'</label></p>
+//            <p><input type="'.$type.'" id="" name="' .$name. '" id="'.$name.'"
+//            value="'.$this->getValue($name).'" /></p>';
+//    }
 
     /**
      * @return string
